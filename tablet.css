@@ -1,0 +1,111 @@
+@media screen and (max-width: 868px){
+
+  /* PONER EN 768 */
+
+  :root {
+    --naranjaFuerte: #FC4A19;
+    --naranjaMedio: #F78034;
+    --naranjaClaro: #F7A539;
+    --naranjaRojo: #F73A34;
+    --mostaza: #FAB514;
+  }
+
+  nav {
+    position: relative;
+    padding: 15px;
+  }
+
+  /* .estilo-menu{
+    width: 150px;
+  } */
+
+  .logo{
+    width: 600px;
+    padding-left: 10px;
+  }
+
+  .logo figure{
+    width: 300px;
+  }
+
+  .logo figure img{
+    width: 100%;
+    display: block;
+  }
+
+  nav ul {
+    background-color: #333;
+    color: white;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 0;
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    left: -300%;
+    z-index: 100;
+    transition: all 0.5s linear;
+  }
+  nav ul li {
+    padding: 5px 0px;
+    width: 100%;
+    border-bottom: 2px white dotted;
+  }
+  nav ul li a {
+    width: 100%;
+  }
+  nav ul li a:hover {
+    background: var(--mostaza);
+  }
+  #icono_menu {
+    display: flex;
+  }
+  nav ul.abrir_menu {
+    left: 0;
+  }
+  nav ul.cerrar_menu {
+    left: -300%;
+  }
+
+  .texto{
+    padding: 10px;
+    width: 90%;
+  }
+
+  .estilo-servicio{
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .galleria{
+    display: grid;
+    grid-template: repeat(3, auto) / repeat(2, auto);
+    grid-template-areas:
+        "hombres mujer"
+        "risado tablet"
+        "acostado tres";
+        grid-gap: 10px;
+        justify-items: center;
+        align-items: center;
+  }
+
+  .img-cont{
+    display: none;
+  }
+
+  footer figure{
+    margin-left: 0px;
+    margin-right: 20px;
+  }
+
+  .figura{
+    width: 90%;
+  }
+
+  #icono_menu{
+    border: 3px white solid;
+  }
+
+
+}

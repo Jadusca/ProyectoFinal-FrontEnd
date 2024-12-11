@@ -1,0 +1,1092 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --naranjaFuerte: #FC4A19;
+  --naranjaMedio: #F78034;
+  --naranjaClaro: #F7A539;
+  --naranjaRojo: #F73A34;
+  --mostaza: #FAB514;
+}
+
+body{
+  font-family: helvetica;
+  font-size: 16px;
+  line-height: 24px;
+  color: #333;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+header{
+  background-color: var(--naranjaFuerte);
+}
+
+.estructura{
+  padding-top: 10px;
+  padding-bottom: 10px;
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo{
+  width: 300px;
+}
+
+.logo figure{
+  width: 200px;
+}
+
+.logo figure img{
+  width: 100%;
+  display: block;
+}
+
+.estilo-menu{
+  width: 800px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+nav ul li {
+  padding: 5px;
+}
+nav ul li a {
+  color: #fff;
+  display: inline-block;
+  padding: 10px 20px;
+  text-decoration: none;
+  transition: all 0.5s;
+  border: 1px transparent solid;
+  border-radius: 10px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+nav ul li a:hover {
+  background: var(--mostaza);
+  color: white;
+  border-radius: 10px;
+}
+#icono_menu {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  width: 50px;
+  height: 50px;
+  font-size: 50px;
+  margin-left: 300px;
+}
+
+/* CSS SLIDES */
+
+.rslides {
+  position: relative;
+  list-style: none;
+  overflow: hidden;
+  width: 100%;
+  min-height: 400px;
+  padding: 0;
+  margin: auto;
+  /* border: 3px #800000 solid; */
+  }
+
+.rslides li {
+  backface-visibility: hidden;
+  position: absolute;
+  display: none;
+  width: 100%;
+  left: 0;
+  top: 0;
+  }
+
+.rslides li:first-child {
+  position: relative;
+  display: block;
+  float: left;
+  }
+
+.rslides img {
+  display: block;
+  height: auto;
+  min-height: 400px;
+  float: left;
+  width: 100%;
+  object-fit: cover;
+  border: 0;
+  }
+
+/* FIN SLIDES */
+
+/* Estilos generales para las flechas */
+#flechaIzquierda, #flechaDerecha {
+  background-color: rgba(255, 255, 255, 0.537);
+  color: var(--naranjaClaro);
+  padding: 10px;
+  text-decoration: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s;
+}
+
+#flechaIzquierda {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+}
+
+#flechaDerecha {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+}
+
+#flechaIzquierda:hover, #flechaDerecha:hover {
+  background-color: var(--naranjaMedio);
+  color: white;
+}
+
+.slidesfotos{
+  position: relative;
+}
+
+.texto{
+  padding: 30px;
+  background-color: var(--naranjaRojo);
+  color: white;
+  text-align: start;
+  position: absolute;
+  z-index: 10;
+  top:50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.767);
+}
+
+.parra{
+  font-size: 16px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  margin-bottom: 20px;
+}
+
+.texto h2{
+  margin-top: 25px;
+  font-size: 40px;
+  line-height: 43px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.subtitulo{
+  font-size: 20px;
+  font-weight: bold;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.texto a{
+  text-decoration: none;
+  color: white;
+  border: 1px white solid;
+  padding: 10px 30px;
+  background-color: var(--naranjaMedio);
+  border-radius: 10px;
+  font-size: 18px;
+  transition: all 0.5s;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.texto a:hover{
+  background-color: var(--mostaza);
+  color: black;
+}
+
+/* Css de ABOUT */
+
+.sobre-nosotros{
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  justify-items: center;
+  align-items: center;
+  gap: 50px;
+}
+
+.figura{
+  width: 600px;
+  position: relative;
+}
+
+.figura figure{
+  width: 500px;
+}
+
+.figura figure img{
+  width: 100%;
+  display: block;
+  clip-path: circle(50% at 50% 50%);
+}
+
+.circulo{
+  background-color: var(--naranjaMedio);
+  width: 200px;
+  height: 150px;
+  text-align: center;
+  color: white;
+  padding-top: 40px;
+  clip-path: polygon(50% 0%, 83% 12%, 100% 43%, 94% 78%, 68% 100%, 32% 100%, 6% 78%, 0% 43%, 17% 12%);
+  position: absolute;
+  bottom: 3%;
+  right: 12%;
+}
+
+.numero{
+  font-size: 30px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  padding-bottom: 5px;
+}
+
+.promo{
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.info-about{
+  width: 500px;
+}
+
+.info-about h1{
+  color: black;
+  font-size: 38px;
+  line-height: 41px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.info-about h3{
+  color: var(--naranjaFuerte);
+  font-size: 23px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: italic;
+  margin-bottom: 15px;
+}
+
+.info-about h3 i{
+  margin-left: 15px;
+  transition: transform 0.6s; /* Transición suave */
+  cursor: pointer;
+}
+
+.info-about h3 i:hover{
+  transform: rotateY(180deg);
+}
+
+.info-about p{
+  font-size: 16px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.lin-about{
+  border: 2px var(--mostaza) dashed;
+  width: 200px;
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+
+.acordeon_titulo{
+  cursor: pointer;
+  padding: 15px;
+  background-color: var(--naranjaMedio);
+  color: white;
+  margin-top: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 180px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+  transition: all 0.5s;
+}
+
+.acordeon_titulo:hover{
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+  background-color: var(--mostaza);
+}
+
+.acordeon_titulo h2{
+  font-size: 18px;
+}
+
+i{
+  font-size: 20px;
+}
+
+.acordeon_contenido{
+  padding: 15px;
+  display: none;
+}
+
+.lista{
+  margin-left: 30px;
+  margin-top: 15px;
+  font-size: 16px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.rotarflecha{
+  transition: all 0.5s;
+  transform: rotate(180deg) !important;
+}
+
+#flecha{
+  transform: rotate(0deg);
+  transition: all 0.5s;
+}
+
+@keyframes rebote {
+  0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+  }
+  40% {
+      transform: translateY(-30px);
+  }
+  60% {
+      transform: translateY(-15px);
+  }
+}
+
+.rebote {
+  animation: rebote 3s infinite;
+}
+/* Fin De ABOUT */
+
+/* CSS DE servicio */
+
+.forma-servicio{
+  max-width: 1200px;
+  margin: auto;
+}
+
+.titulo-servicio{
+  text-align: center;
+}
+
+.titulo-servicio h1{
+  padding-bottom: 15px;
+  color: black;
+  font-size: 35px;
+  line-height: 41px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.linea-serv{
+  border: 2px var(--naranjaFuerte) solid;
+  width: 250px;
+  margin: auto;
+}
+
+.estilo-servicio{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+}
+
+.estilo-servicio article{
+  border-radius: 10px;
+  padding: 10px;
+  width: 350px;
+  box-shadow: -18px -13px 24px 0px rgba(0, 0, 0, 0.21);
+}
+
+.estilo-servicio article figure{
+  width: 320px;
+  margin: auto;
+  position: relative;
+  overflow: hidden; /* oculta las cosas  */
+}
+
+.estilo-servicio article figure:hover .info-banner{
+  top: 0%;
+}
+
+.estilo-servicio article figure img{
+  width: 100%;
+  display: block;
+  border-radius: 15px;
+}
+
+.info-servicio{
+  margin-top: 15px;
+}
+
+.info-servicio h3{
+  color: var(--naranjaFuerte);
+  font-size: 23px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: italic;
+  margin-bottom: 15px;
+}
+
+.info-servicio p{
+  font-size: 16px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.info-banner{
+  background-color: rgba(247, 59, 52, 0.79);
+  width: 320px;
+  height: 320px;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 2;
+  transition: all 0.5s linear;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.info-banner a{
+  display: inline-block;
+  color: white;
+  background-color: var(--naranjaMedio);
+  border-radius: 50%;
+  padding: 20px;
+  text-decoration: none;
+}
+
+.info-banner a i{
+  font-size: 40px;
+}
+
+@keyframes pulso {
+  0%, 100% {
+      transform: scale(1);
+  }
+  50% {
+      transform: scale(1.1);
+  }
+}
+
+.pulso {
+  animation: pulso 1s infinite;
+}
+
+/* FIN DE CSS SERVICIO */
+
+
+/* CSS MODAL */
+
+.filtro {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.534);
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  display: none;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal {
+  max-width: 600px;
+  width: 90%;
+  height: auto;
+  max-height: 90vh;
+  background-color: white;
+  padding: 30px;
+  overflow: auto; /* permite scroll si hay contenido extra */
+  position: relative;
+  border-radius: 15px;
+  margin: 0 auto; /* centra horizontalmente si es necesario */
+}
+
+.modal iframe {
+  width: 100%;
+  height: auto; /* se ajusta al contenido */
+  aspect-ratio: 16 / 9; /* asegura la proporción del video */
+}
+
+.modal i {
+  color: red;
+  position: absolute;
+  top: 2%;
+  right: 3%;
+  font-size: 25px;
+}
+
+.mostrar{
+  display: flex;
+}
+/* FIN CSS MODAL */
+
+
+/* CSS DE Video responsive */
+
+.video-cont{
+  margin-top: 20px;
+}
+
+#contenedor_youtube {
+  height: 0;
+  overflow: hidden;
+  padding-bottom: 56.25%; /* relación de aspecto 16:9 */
+  position: relative;
+}
+
+#contenedor_youtube iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* FIN CSS DE Video responsive */
+
+
+/* CSS DE PARRALLAXAS */
+
+.parrallaxas{
+  background-image: url(imagenes/logo-modified.jpg);
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  height: 500px;
+  margin-top: 15px;
+  position: relative;
+}
+
+.parrallaxas::before{
+  content: "";
+  background: rgb(247,58,52);
+  background: radial-gradient(circle, rgba(247,58,52,0.7394607501203607) 0%, rgba(250,181,20,0.74) 78%);
+  /* background-color: rgba(0, 0, 0, 0.5); */
+  width: 100%;
+  height: 500px;
+  position: absolute;
+  z-index: 3;
+  top: 0;
+  left: 0;
+}
+
+/* FIN DE PARRALLAXAS */
+
+.personas{
+  width: 90%;
+  height: 90%;
+  position: absolute;
+  z-index: 4;
+  color: black;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.equipo{
+  width: 300px;
+}
+
+.equipo figure{
+  overflow: hidden;
+  width: 300px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.equipo figure img{
+  width: 100%;
+  display: block;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  transform: scale(1);
+  transition: all 0.5s;
+}
+
+.equipo figure img:hover{
+  transform: scale(1.3);
+}
+
+.info-name{
+  padding: 10px;
+  color: white;
+  background-color: #000000a1;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.info-name h2{
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.info-name p{
+  margin-top: 2px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.members h3{
+  text-align: center;
+  margin-top: -12.5px;
+  font-size: 18px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: italic;
+  color: var(--naranjaFuerte);
+}
+
+.members h1{
+  text-align: center;
+  margin-top: 20px;
+  font-size: 35px;
+  line-height: 41px;
+  color: black;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.hr1{
+  width: 70px;
+  margin-left: 38.5%;
+  border: none;
+  background-color: var(--naranjaFuerte);
+  margin-top: 40px;
+  height: 5px;
+}
+
+.hr2{
+  width: 70px;
+  margin-left: 57%;
+  margin-top: -17px;
+  border: none;
+  background-color: var(--naranjaFuerte);
+  height: 5px;
+}
+
+/* FIN DE CSS DE EQUIPO */
+
+
+/* CSS DE Gallery */
+
+.estilo-Port{
+  max-width: 1200px;
+  margin: auto;
+}
+
+.titulo-port{
+  padding: 10px;
+  text-align: center;
+}
+
+.titulo-port h1{
+  font-size: 35px;
+  line-height: 41px;
+  color: black;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.titulo-port h3{
+  font-size: 20px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: italic;
+  color: var(--naranjaFuerte);
+  margin-bottom: 9px;
+}
+
+.info-galeria{
+  padding-top: 10px;
+  text-align: center;
+}
+
+.info-galeria h3{
+  font-size: 20px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: italic;
+  color: var(--naranjaFuerte);
+  margin-bottom: 3px;
+}
+
+.info-galeria p{
+  font-size: 15px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: black;
+  margin-bottom: 10px;
+}
+
+.galleria figure{
+  width: 350px;
+  height: 350px;
+}
+
+.galleria figure img{
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  filter: grayscale(100%);
+  transition: all .5s linear;
+}
+
+.galleria figure img:hover{
+  filter: grayscale(0);
+}
+
+.galleria{
+  display: grid;
+  grid-template: repeat(2, auto) / repeat(2, auto);
+  grid-template-areas: "hombres mujer risado" "tablet acostado tres";
+  grid-gap: 20px;
+}
+
+.foto1{
+  grid-area: hombres;
+}
+
+.foto2{
+  grid-area: mujer;
+}
+
+.foto3{
+  grid-area: risado;
+}
+
+.foto4{
+  grid-area: tablet;
+}
+
+.foto5{
+  grid-area: acostado;
+}
+
+.foto6{
+  grid-area: tres;
+}
+
+/* Fin de Gallery */
+
+/* Css de Contacto */
+
+.estructura-conta{
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.img-cont{
+  width: 600px;
+  height: 600px;
+}
+
+.img-cont figure{
+  width: 600px;
+  height: 600px;
+  clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+}
+
+.img-cont img{
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.info-cont{
+  width: 500px;
+}
+
+.info-cont h1{
+  color: black;
+  font-size: 38px;
+  line-height: 41px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.info-cont h3{
+  color: var(--naranjaFuerte);
+  font-size: 23px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: italic;
+  margin-bottom: 15px;
+}
+
+.info-cont h3 i{
+  margin-left: 15px;
+  transition: transform 0.6s; /* Transición suave */
+  cursor: pointer;
+  font-size: 30px;
+}
+
+.info-cont h3 i:hover{
+  transform: rotateY(180deg);
+}
+
+.info-cont p{
+  font-size: 16px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+#contactForm {
+  max-width: 400px;
+  margin: auto;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+  font-weight: bold;
+  margin-bottom: 3px;
+  display: block;
+  color: var(--naranjaMedio);
+  font-size: 17px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: italic;
+}
+
+input[type="text"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: border-color 0.3s;
+}
+
+input[type="text"]:focus,
+textarea:focus {
+  border-color: #007BFF;
+  outline: none;
+}
+
+.error {
+  color: red;
+  font-size: 0.9em;
+}
+
+input[type="submit"] {
+  background-color: var(--naranjaFuerte);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+  display: block;
+  margin: auto;
+}
+
+input[type="submit"]:hover {
+  background-color: var(--mostaza);
+}
+
+/* Fin de Contacto */
+
+/* Testimonio */
+
+.titulo-testimonio{
+  text-align: center;
+}
+
+.titulo-testimonio h1 {
+  padding-bottom: 20px;
+  color: black;
+  font-size: 35px;
+  line-height: 41px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.img-test{
+  width: 300px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.img-test figure{
+  width: 100px;
+  height: 100px;
+}
+
+.img-test img{
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.img-test h3{
+  color: var(--naranjaFuerte);
+  font-size: 20px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.test-pa{
+  font-size: 15px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.slide p{
+  color: #707070;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Fin Testimonio */
+
+/* Flecha de inicio */
+
+.scrollToTop {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: none; /* Oculto por defecto */
+  background-color: var(--naranjaRojo);
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 24px;
+  text-align: center;
+}
+
+.scrollToTop:hover {
+  background-color: var(--naranjaMedio);
+}
+
+/* FIN Flecha de inicio */
+
+footer{
+  border-top: 5px var(--naranjaRojo) solid;
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer figure{
+  margin-left: 40px;
+  width: 200px;
+}
+
+footer figure img{
+  width: 100%;
+}
+
+footer p{
+  color: #707070;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.redes{
+  width: 200px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  margin-right: 30px;
+}
+
+.redes i{
+  font-size: 25px;
+  color: var(--naranjaFuerte);
+}
